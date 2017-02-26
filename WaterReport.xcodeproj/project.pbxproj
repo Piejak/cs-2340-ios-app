@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2075CF695051D62ED6BD3396 /* Pods_WaterReport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EE2E26E744DD2AAFB2CE3F /* Pods_WaterReport.framework */; };
 		32A0F84CB6E031713A399128 /* Pods_WaterReportTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91186217ADF1E94D161EEC2 /* Pods_WaterReportTests.framework */; };
+		9CB6AB8A1E628C190031174E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CB6AB891E628C190031174E /* GoogleService-Info.plist */; };
 		CEF2A5431E4F610500C604AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2A5421E4F610500C604AC /* AppDelegate.swift */; };
 		CEF2A5451E4F610500C604AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2A5441E4F610500C604AC /* ViewController.swift */; };
 		CEF2A5481E4F610500C604AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF2A5461E4F610500C604AC /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		25CCF7D01983EFC64155ABB3 /* Pods-WaterReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterReport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaterReport/Pods-WaterReport.debug.xcconfig"; sourceTree = "<group>"; };
 		83C4221D112E739C0126A551 /* Pods-WaterReport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterReport.release.xcconfig"; path = "Pods/Target Support Files/Pods-WaterReport/Pods-WaterReport.release.xcconfig"; sourceTree = "<group>"; };
+		9CB6AB891E628C190031174E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D64673313F401252D862F35 /* Pods-WaterReportTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterReportTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaterReportTests/Pods-WaterReportTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B25968BFDDB7825EE9329056 /* Pods-WaterReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterReportTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WaterReportTests/Pods-WaterReportTests.release.xcconfig"; sourceTree = "<group>"; };
 		B8EE2E26E744DD2AAFB2CE3F /* Pods_WaterReport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaterReport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +100,7 @@
 		CEF2A5411E4F610500C604AC /* WaterReport */ = {
 			isa = PBXGroup;
 			children = (
+				9CB6AB891E628C190031174E /* GoogleService-Info.plist */,
 				CEF2A5421E4F610500C604AC /* AppDelegate.swift */,
 				CEF2A5441E4F610500C604AC /* ViewController.swift */,
 				CEF2A5461E4F610500C604AC /* Main.storyboard */,
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF2A54D1E4F610500C604AC /* LaunchScreen.storyboard in Resources */,
+				9CB6AB8A1E628C190031174E /* GoogleService-Info.plist in Resources */,
 				CEF2A54A1E4F610500C604AC /* Assets.xcassets in Resources */,
 				CEF2A5481E4F610500C604AC /* Main.storyboard in Resources */,
 			);
@@ -541,6 +545,7 @@
 				CEF2A55E1E4F610500C604AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CEF2A55F1E4F610500C604AC /* Build configuration list for PBXNativeTarget "WaterReportTests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +554,7 @@
 				CEF2A5611E4F610500C604AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

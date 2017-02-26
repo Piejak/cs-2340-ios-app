@@ -7,11 +7,15 @@ target 'WaterReport' do
 
   # Pods for WaterReport
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase'
+
   
   # Pods for sign in with other providers
   pod 'FBSDKLoginKit'
   pod 'GoogleSignIn'
   pod 'TwitterKit'
+  
 
 
   target 'WaterReportTests' do
