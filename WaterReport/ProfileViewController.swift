@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  ProfileViewController.swift
 //  WaterReport
 //
 //  Created by Hui Li on 2/26/17.
@@ -7,14 +7,9 @@
 //
 
 import UIKit
-import Firebase
 
-class LoginViewController: UIViewController {
-
-    @IBOutlet weak var Email: UITextField!
+class ProfileViewController: UIViewController {
     
-    
-    @IBOutlet weak var Password: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,19 +21,6 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    @IBAction func login(_ sender: AnyObject) {
-        FIRAuth.auth()?.signIn(withEmail:Email.text!, password: Password.text!, completion: {
-                user, error in
-                if error != nil {
-                    print("Incorrect")
-                }
-                else {
-                  self.performSegue(withIdentifier: "LoginToProfile", sender: nil)
-            }
-        })
-    }
 
     /*
     // MARK: - Navigation
