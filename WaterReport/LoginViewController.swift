@@ -34,6 +34,7 @@ class LoginViewController: UIViewController {
                 if error != nil {
                     print("Incorrect")
                 }
+                    
                 else {
                   self.performSegue(withIdentifier: "LoginToProfile", sender: nil)
             }
