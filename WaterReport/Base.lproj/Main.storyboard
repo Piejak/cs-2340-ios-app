@@ -274,6 +274,7 @@
                                 </state>
                                 <connections>
                                     <action selector="CreateAccount:" destination="u2g-Dc-3kL" eventType="touchUpInside" id="2i7-yJ-Ylf"/>
+                                    <segue destination="ydn-pJ-kl9" kind="show" id="sdd-su-wea"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSU-wY-xyF">
@@ -285,6 +286,7 @@
                                 </state>
                                 <connections>
                                     <action selector="CreateAccount:" destination="u2g-Dc-3kL" eventType="touchUpInside" id="HjF-hu-fzu"/>
+                                    <segue destination="ydn-pJ-kl9" kind="show" id="F1G-RZ-2PL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -360,8 +362,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wJd-Z2-yrg"/>
         <segue reference="aOw-I5-smq"/>
         <segue reference="r0L-ek-vCW"/>
+        <segue reference="sdd-su-wea"/>
     </inferredMetricsTieBreakers>
 </document>
