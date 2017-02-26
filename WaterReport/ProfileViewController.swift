@@ -7,12 +7,46 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseStorage
+import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var userEmail: UITextField!
+    @IBOutlet weak var userNewPassword: UITextField!
+    @IBOutlet weak var userName: UITextField!
+    @IBOutlet weak var userAge: UITextField!
+    @IBOutlet weak var userAffiliation: UITextField!
+    @IBOutlet weak var uerAddress: UITextField!
+    
+    
+    var dataBaseRef: FIRDatabaseReference! {
+        return FIRDatabase.database().reference()
+    }
+    
+    var storageRef : FIRStorage {
+        return FIRStorage.storage()
+    }
+    
+    func loadUserInfo() {
+        let userRef = dataBaseRef.child("users/\(FIRAuth.auth()?.currentUser!.uid)")
+        userRef.observe(.value, with: {(snapshot) in
+            let user = User(snapshot: snapshot)
+            self.userName.text = user.realname
+            self.userAge.text = String(describing: user.age)
+            self.userAffiliation.text = user.affiliation
+            
+        }) { (error) in
+            print(error.localizedDescription)
+            
+        }
+    }
+     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        loadUserInfo()
 
         // Do any additional setup after loading the view.
     }

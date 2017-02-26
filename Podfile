@@ -10,6 +10,8 @@ target 'WaterReport' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase'
+  pod 'FirebaseDatabase'
+  pod 'FirebaseStorage'
 
   
   # Pods for sign in with other providers
@@ -19,7 +21,6 @@ target 'WaterReport' do
   
   
   
-
   target 'WaterReportTests' do
     inherit! :search_paths
     # Pods for testing

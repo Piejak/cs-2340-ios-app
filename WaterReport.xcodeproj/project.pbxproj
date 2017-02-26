@@ -13,6 +13,9 @@
 		9C19B7461E62AAC100D54356 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19B7451E62AAC100D54356 /* RegisterViewController.swift */; };
 		9C475ADB1E62BA09002BF6B1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C475ADA1E62BA09002BF6B1 /* ProfileViewController.swift */; };
 		9CB6AB8A1E628C190031174E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CB6AB891E628C190031174E /* GoogleService-Info.plist */; };
+		9CF826EB1E634CE20081591A /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF826EA1E634CE20081591A /* LandingViewController.swift */; };
+		9CF826F01E635E480081591A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF826EF1E635E480081591A /* User.swift */; };
+		9CF826F21E635F4E0081591A /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF826F11E635F4E0081591A /* AccountType.swift */; };
 		CEF2A5431E4F610500C604AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2A5421E4F610500C604AC /* AppDelegate.swift */; };
 		CEF2A5451E4F610500C604AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2A5441E4F610500C604AC /* ViewController.swift */; };
 		CEF2A5481E4F610500C604AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF2A5461E4F610500C604AC /* Main.storyboard */; };
@@ -38,6 +41,9 @@
 		9C19B7451E62AAC100D54356 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9C475ADA1E62BA09002BF6B1 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9CB6AB891E628C190031174E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9CF826EA1E634CE20081591A /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		9CF826EF1E635E480081591A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9CF826F11E635F4E0081591A /* AccountType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
 		9D64673313F401252D862F35 /* Pods-WaterReportTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterReportTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaterReportTests/Pods-WaterReportTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B25968BFDDB7825EE9329056 /* Pods-WaterReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterReportTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WaterReportTests/Pods-WaterReportTests.release.xcconfig"; sourceTree = "<group>"; };
 		B8EE2E26E744DD2AAFB2CE3F /* Pods_WaterReport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaterReport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +89,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9CF826EC1E6358730081591A /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEF2A5421E4F610500C604AC /* AppDelegate.swift */,
+				CEF2A5441E4F610500C604AC /* ViewController.swift */,
+				9C19B7431E62AA8800D54356 /* LoginViewController.swift */,
+				9C19B7451E62AAC100D54356 /* RegisterViewController.swift */,
+				9C475ADA1E62BA09002BF6B1 /* ProfileViewController.swift */,
+				9CF826EA1E634CE20081591A /* LandingViewController.swift */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		9CF826ED1E635D160081591A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CF826EF1E635E480081591A /* User.swift */,
+				9CF826F11E635F4E0081591A /* AccountType.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9CF826EE1E635D2D0081591A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9CB6AB891E628C190031174E /* GoogleService-Info.plist */,
+				CEF2A5461E4F610500C604AC /* Main.storyboard */,
+				CEF2A5491E4F610500C604AC /* Assets.xcassets */,
+				CEF2A54B1E4F610500C604AC /* LaunchScreen.storyboard */,
+				CEF2A54E1E4F610500C604AC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		CEF2A5361E4F610500C604AC = {
 			isa = PBXGroup;
 			children = (
@@ -106,16 +146,9 @@
 		CEF2A5411E4F610500C604AC /* WaterReport */ = {
 			isa = PBXGroup;
 			children = (
-				9CB6AB891E628C190031174E /* GoogleService-Info.plist */,
-				CEF2A5421E4F610500C604AC /* AppDelegate.swift */,
-				CEF2A5441E4F610500C604AC /* ViewController.swift */,
-				CEF2A5461E4F610500C604AC /* Main.storyboard */,
-				CEF2A5491E4F610500C604AC /* Assets.xcassets */,
-				CEF2A54B1E4F610500C604AC /* LaunchScreen.storyboard */,
-				CEF2A54E1E4F610500C604AC /* Info.plist */,
-				9C19B7431E62AA8800D54356 /* LoginViewController.swift */,
-				9C19B7451E62AAC100D54356 /* RegisterViewController.swift */,
-				9C475ADA1E62BA09002BF6B1 /* ProfileViewController.swift */,
+				9CF826EC1E6358730081591A /* View Controller */,
+				9CF826ED1E635D160081591A /* Model */,
+				9CF826EE1E635D2D0081591A /* Supporting Files */,
 			);
 			path = WaterReport;
 			sourceTree = "<group>";
@@ -346,8 +379,11 @@
 				9C19B7441E62AA8800D54356 /* LoginViewController.swift in Sources */,
 				CEF2A5451E4F610500C604AC /* ViewController.swift in Sources */,
 				9C475ADB1E62BA09002BF6B1 /* ProfileViewController.swift in Sources */,
+				9CF826F21E635F4E0081591A /* AccountType.swift in Sources */,
 				CEF2A5431E4F610500C604AC /* AppDelegate.swift in Sources */,
+				9CF826EB1E634CE20081591A /* LandingViewController.swift in Sources */,
 				9C19B7461E62AAC100D54356 /* RegisterViewController.swift in Sources */,
+				9CF826F01E635E480081591A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
