@@ -134,7 +134,7 @@
         <!--Login View Controller-->
         <scene sceneID="IPm-1K-xZG">
             <objects>
-                <viewController id="UKi-cW-Pux" customClass="LoginViewController" customModule="WaterReport" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="UKi-cW-Pux" customClass="LoginViewController" customModule="WaterReport" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V4q-Yv-Ujv"/>
                         <viewControllerLayoutGuide type="bottom" id="V4J-kO-4aI"/>
@@ -223,13 +223,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="GWm-FD-H2o">
-                                <rect key="frame" x="38" y="110" width="303" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="O8N-6y-mOS">
                                 <rect key="frame" x="38" y="163" width="303" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -274,6 +267,7 @@
                                 </state>
                                 <connections>
                                     <action selector="CreateAccount:" destination="u2g-Dc-3kL" eventType="touchUpInside" id="2i7-yJ-Ylf"/>
+                                    <action selector="SaveProfile:" destination="OVo-0S-i71" eventType="touchUpInside" id="ZME-OC-eW2"/>
                                     <segue destination="ydn-pJ-kl9" kind="show" id="sdd-su-wea"/>
                                 </connections>
                             </button>
@@ -289,21 +283,35 @@
                                     <segue destination="ydn-pJ-kl9" kind="show" id="F1G-RZ-2PL"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIQ-dT-60p">
+                                <rect key="frame" x="38" y="110" width="303" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Email:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eyU-6Z-t7a">
+                                <rect key="frame" x="38" y="77" width="240" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="UserAge" destination="vXW-gQ-Q0g" id="o1G-z1-kNI"/>
+                        <outlet property="UserEmailLabel" destination="XIQ-dT-60p" id="bbI-Rh-8dv"/>
                         <outlet property="uerAddress" destination="frP-3k-7Vo" id="PMx-GV-gTj"/>
                         <outlet property="userAffiliation" destination="9Ja-fO-cEc" id="1On-0G-i2t"/>
-                        <outlet property="userEmail" destination="GWm-FD-H2o" id="QVQ-I7-57w"/>
                         <outlet property="userName" destination="2ay-WI-ppP" id="ptR-an-Wkr"/>
                         <outlet property="userNewPassword" destination="O8N-6y-mOS" id="oVd-LC-r5s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Lf-ub-Pcx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2774" y="-80"/>
+            <point key="canvasLocation" x="2773.5999999999999" y="-80.50974512743629"/>
         </scene>
         <!--Landing View Controller-->
         <scene sceneID="2C4-Tz-1jd">
@@ -317,29 +325,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4F-uh-1b4">
-                                <rect key="frame" x="124" y="150" width="127" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.15410047769999999" green="0.41306763889999998" blue="0.69063264130000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Your Profile">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="CreateAccount:" destination="u2g-Dc-3kL" eventType="touchUpInside" id="BPf-uG-77I"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJR-kU-izg">
-                                <rect key="frame" x="124" y="150" width="127" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.15410047769999999" green="0.41306763889999998" blue="0.69063264130000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Your Profile">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="CreateAccount:" destination="u2g-Dc-3kL" eventType="touchUpInside" id="Ony-MS-FSA"/>
-                                    <segue destination="OVo-0S-i71" kind="show" id="Ht3-rL-i7b"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dqx-LY-xm2">
                                 <rect key="frame" x="124" y="440" width="127" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -348,8 +333,19 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="CreateAccount:" destination="u2g-Dc-3kL" eventType="touchUpInside" id="JdH-Zp-VFb"/>
-                                    <action selector="logoutButtonClicked:" destination="ydn-pJ-kl9" eventType="touchUpInside" id="oiE-1K-Xtg"/>
+                                    <action selector="LogOutAction:" destination="ydn-pJ-kl9" eventType="touchUpInside" id="7e0-Xv-g2e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJR-kU-izg">
+                                <rect key="frame" x="124" y="124" width="127" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.15410047769999999" green="0.41306763889999998" blue="0.69063264130000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Your Profile">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="CreateAccount:" destination="u2g-Dc-3kL" eventType="touchUpInside" id="Ony-MS-FSA"/>
+                                    <segue destination="OVo-0S-i71" kind="show" id="Ht3-rL-i7b"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -362,8 +358,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aOw-I5-smq"/>
+        <segue reference="J7T-Md-D0B"/>
         <segue reference="r0L-ek-vCW"/>
-        <segue reference="sdd-su-wea"/>
+        <segue reference="aOw-I5-smq"/>
     </inferredMetricsTieBreakers>
 </document>

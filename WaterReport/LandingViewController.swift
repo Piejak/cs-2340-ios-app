@@ -24,14 +24,19 @@ class LandingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func logOutAction(_ sender: AnyObject) {
+
+    @IBAction func LogOutAction(_ sender: AnyObject) {
+        if FIRAuth.auth()?.currentUser != nil {
         do {
-            try FIRAuth.auth()?.signOut()
-        } catch let error {
-            print(error)
+            try? FIRAuth.auth()!.signOut()
+            
+            if FIRAuth.auth()?.currentUser == nil {
+                let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login") as! LoginViewController
+                self.present(loginVC, animated: true, completion: nil)
+                }
+            }
         }
     }
-
     /*
     // MARK: - Navigation
 

@@ -13,7 +13,9 @@ import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     
-    @IBOutlet weak var userEmail: UITextField!
+    
+    @IBOutlet weak var UserEmailLabel: UILabel!
+    
     @IBOutlet weak var userNewPassword: UITextField!
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var userAge: UITextField!
@@ -21,47 +23,33 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var uerAddress: UITextField!
     
     
-    var dataBaseRef: FIRDatabaseReference! {
-        return FIRDatabase.database().reference()
-    }
     
-    var storageRef : FIRStorage {
-        return FIRStorage.storage()
-    }
     
-    func loadUserInfo() {
-        let userRef = dataBaseRef.child("users/\(FIRAuth.auth()?.currentUser!.uid)")
-        userRef.observe(.value, with: {(snapshot) in
-            let user = User(snapshot: snapshot)
-            self.userName.text = user.realname
-            self.userAge.text = String(describing: user.age)
-            self.userAffiliation.text = user.affiliation
-            
-        }) { (error) in
-            print(error.localizedDescription)
-            
-        }
-    }
-     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        loadUserInfo()
-
+        showUserProfile()
+        
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        loadUserInfo()
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
+    func showUserProfile() {
+        if let user = FIRAuth.auth()?.currentUser {
+            userName.text = user.displayName
+            print(user.displayName)
+            UserEmailLabel.text = user.email
+            // Do NOT use this value to authenticate with
+            // your backend server, if you have one.Use
+            // getTokenWithCompletion:completion: instead.
+        } else {
+            // No user is signed in.
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
