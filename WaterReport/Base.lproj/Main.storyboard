@@ -223,7 +223,7 @@
         <!--Profile View Controller-->
         <scene sceneID="nrH-Qu-ZYe">
             <objects>
-                <viewController id="OVo-0S-i71" customClass="ProfileViewController" customModule="WaterReport" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" id="OVo-0S-i71" customClass="ProfileViewController" customModule="WaterReport" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WbQ-pE-IT2"/>
                         <viewControllerLayoutGuide type="bottom" id="eTk-zL-Nat"/>

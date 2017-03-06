@@ -44,7 +44,7 @@ class RegisterViewController: UIViewController {
             else {
                 print("User Created")
                 let ref = FIRDatabase.database().reference()
-                let userInfo = ["Email": user?.email, "Name": "", "Age": "", "Address": "", "Affiliation": "", "AccounttType": AccountType.Default.rawValue, "uid": user?.uid]
+                let userInfo = ["Email": user?.email, "Name": "", "Age": "", "Address": "", "Affiliation": "", "AccountType": AccountType.Default.rawValue, "uid": user?.uid]
                 ref.child("users").childByAutoId().setValue(userInfo)
                 self.login()
             }

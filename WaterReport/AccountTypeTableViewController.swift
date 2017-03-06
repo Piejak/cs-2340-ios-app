@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseStorage
+import FirebaseAuth
+
 
 class AccountTypeTableViewController: UITableViewController {
     var accountType:[String] = [AccountType.User.rawValue, AccountType.Administrator.rawValue, AccountType.Manager.rawValue, AccountType.Worker.rawValue, AccountType.Default.rawValue]
@@ -44,6 +48,20 @@ class AccountTypeTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let ref = FIRDatabase.database().reference()
+        let vcName = accountType[indexPath.row]
+        ref.child("users").observeSingleEvent(of: .value, with: { (snapshot) in
+            if let result = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for child in result {
+                    var userKey = child.key
+                ref.child("users").child(userKey).child("AccountType").setValue(vcName)
+                    let ProfileVC = self.storyboard?.instantiateViewController(withIdentifier: "ProfileVC")
+                    self.navigationController?.pushViewController(ProfileVC!, animated: false)
+                }
+            }
+        })
+    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
