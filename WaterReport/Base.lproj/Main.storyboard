@@ -207,9 +207,8 @@
         <!--Navigation Controller-->
         <scene sceneID="sN4-mh-fVa">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8gf-Dr-Ucg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="SIb-Tm-cyr" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YN3-59-utG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="YN3-59-utG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -217,6 +216,7 @@
                         <segue destination="OVo-0S-i71" kind="relationship" relationship="rootViewController" id="YhU-uR-nCo"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8gf-Dr-Ucg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1854" y="-521"/>
         </scene>
@@ -240,9 +240,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="ChangeProfile:" destination="OVo-0S-i71" eventType="touchUpInside" id="Uyq-xD-Odc"/>
-                                    <action selector="CreateAccount:" destination="u2g-Dc-3kL" eventType="touchUpInside" id="2i7-yJ-Ylf"/>
-                                    <action selector="SaveProfile:" destination="OVo-0S-i71" eventType="touchUpInside" id="ZME-OC-eW2"/>
+                                    <action selector="ChangeProfile:" destination="OVo-0S-i71" eventType="touchUpInside" id="kdf-yH-hML"/>
                                     <segue destination="ydn-pJ-kl9" kind="show" id="sdd-su-wea"/>
                                 </connections>
                             </button>
@@ -254,7 +252,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="CreateAccount:" destination="u2g-Dc-3kL" eventType="touchUpInside" id="HjF-hu-fzu"/>
                                     <segue destination="ydn-pJ-kl9" kind="show" id="F1G-RZ-2PL"/>
                                 </connections>
                             </button>

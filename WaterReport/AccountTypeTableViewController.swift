@@ -2,7 +2,7 @@
 //  AccountTypeTableViewController.swift
 //  WaterReport
 //
-//  Created by 李辉 on 3/6/17.
+//  Created by Hui Li on 3/6/17.
 //  Copyright © 2017 Brian Piejak. All rights reserved.
 //
 
@@ -43,7 +43,7 @@ class AccountTypeTableViewController: UITableViewController {
         cell.textLabel?.text = accountType[indexPath.row]
         return cell
     }
-
+    
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

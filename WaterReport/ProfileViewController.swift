@@ -91,17 +91,18 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     
-    @IBAction func ChangeProfile(_ sender: Any) {
+    @IBAction func ChangeProfile(_ sender: AnyObject) {
         ref = FIRDatabase.database().reference()
         let name: String? = NameField.text
         ref?.child("users").observeSingleEvent(of: .value, with: { (snapshot) in
             if let result = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for child in result {
-                    var userKey = child.key
-                    self.ref?.child("users").child(userKey).child("device").setValue(name)
+                    var userKey = child.key as! String
+                        self.ref?.child("users").child(userKey).child("Name").setValue(name)
                 }
             }
         })
+
     }
     
     override func didReceiveMemoryWarning() {
