@@ -11,25 +11,97 @@ import FirebaseDatabase
 import FirebaseStorage
 import FirebaseAuth
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     
-    @IBOutlet weak var UserEmailLabel: UILabel!
     
-    @IBOutlet weak var userNewPassword: UITextField!
-    @IBOutlet weak var userName: UITextField!
-    @IBOutlet weak var userAge: UITextField!
-    @IBOutlet weak var userAffiliation: UITextField!
-    @IBOutlet weak var uerAddress: UITextField!
+    @IBOutlet weak var myTableView: UITableView!
+    @IBOutlet weak var EmailField: UITextField!
+    @IBOutlet weak var PasswordField: UITextField!
+    @IBOutlet weak var NameField: UITextField!
+    @IBOutlet weak var AgeField: UITextField!
+    @IBOutlet weak var AddressField: UITextField!
+    @IBOutlet weak var AffiliationField: UITextField!
+    
+    var email: String?
+    var realName: String?
+    var affiliation: String?
+    var accountType: AccountType?
+
     
     
+    var mylist:[String] = ["Account Type"]
+    var identities:[String] = ["A"]
+    
+    var ref:FIRDatabaseReference?
+    
+    
+    @IBOutlet weak var myTextField: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showUserProfile()
+        ref = FIRDatabase.database().reference()
+        if let user = FIRAuth.auth()?.currentUser {
+            let email = user.email
+            self.EmailField.text = email
+            // The user's ID, unique to the Firebase project.
+            // Do NOT use this value to authenticate with
+            // your backend server, if you have one.Use
+            // getTokenWithCompletion:completion: instead.
+        } else {
+            // No user is signed in.
+        }
+        
+        ref?.child("users").queryOrderedByKey().observeSingleEvent(of:.childAdded, with: { (snapshot) in
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                let name = dictionary["Name"] as? String
+                self.NameField.text = name
+                let age = dictionary["Age"] as? String
+                self.AgeField.text = age
+                let address = dictionary["Address"] as? String
+                self.AddressField.text = address
+                let affiliation = dictionary["Affiliation"] as? String
+                self.AffiliationField.text = affiliation
+            }
+        })
         
         // Do any additional setup after loading the view.
+    }
+    
+    
+    
+     func tableView(_ tableview: UITableView,  numberOfRowsInSection section: Int) -> Int
+    {
+        return mylist.count
+    }
+    
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        cell.textLabel?.text = mylist[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vcName = identities[indexPath.row]
+        
+        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+        self.navigationController?.pushViewController(viewController!, animated: true)
+    }
+    
+    
+    
+    @IBAction func ChangeProfile(_ sender: Any) {
+        ref = FIRDatabase.database().reference()
+        let name: String? = NameField.text
+        ref?.child("users").observeSingleEvent(of: .value, with: { (snapshot) in
+            if let result = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for child in result {
+                    var userKey = child.key
+                    self.ref?.child("users").child(userKey).child("device").setValue(name)
+                }
+            }
+        })
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,19 +109,8 @@ class ProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func showUserProfile() {
-        if let user = FIRAuth.auth()?.currentUser {
-            userName.text = user.displayName
-            print(user.displayName)
-            UserEmailLabel.text = user.email
-            // Do NOT use this value to authenticate with
-            // your backend server, if you have one.Use
-            // getTokenWithCompletion:completion: instead.
-        } else {
-            // No user is signed in.
-        }
-    }
     
+
     /*
     // MARK: - Navigation
 
@@ -59,5 +120,4 @@ class ProfileViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

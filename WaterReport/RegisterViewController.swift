@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class RegisterViewController: UIViewController {
 
@@ -28,6 +29,10 @@ class RegisterViewController: UIViewController {
     }
     
 
+    
+    
+    
+    
     @IBAction func CreateAccount(_ sender: AnyObject) {
         FIRAuth.auth()?.createUser(withEmail: Email.text!, password: Password.text!, completion: {
             user, error in
@@ -38,6 +43,9 @@ class RegisterViewController: UIViewController {
             }
             else {
                 print("User Created")
+                let ref = FIRDatabase.database().reference()
+                let userInfo = ["Email": user?.email, "Name": "", "Age": "", "Address": "", "Affiliation": "", "AccounttType": AccountType.Default.rawValue, "uid": user?.uid]
+                ref.child("users").childByAutoId().setValue(userInfo)
                 self.login()
             }
         })
