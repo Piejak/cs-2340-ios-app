@@ -18,6 +18,9 @@
 		9CE80E121E69255B00E11285 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE80E101E69255B00E11285 /* Main.storyboard */; };
 		9CE80E141E69329F00E11285 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE80E131E69329F00E11285 /* MenuBar.swift */; };
 		9CECA0DC1E70BA970019A1F0 /* WaterCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECA0DB1E70BA970019A1F0 /* WaterCondition.swift */; };
+		9CECA0DE1E70C5B80019A1F0 /* WaterOverallCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECA0DD1E70C5B80019A1F0 /* WaterOverallCondition.swift */; };
+		9CECA0E01E70C73C0019A1F0 /* WaterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECA0DF1E70C73C0019A1F0 /* WaterType.swift */; };
+		9CECA0E21E70C8610019A1F0 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECA0E11E70C8610019A1F0 /* Location.swift */; };
 		9CF826EB1E634CE20081591A /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF826EA1E634CE20081591A /* LandingViewController.swift */; };
 		9CF826F01E635E480081591A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF826EF1E635E480081591A /* User.swift */; };
 		9CF826F21E635F4E0081591A /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF826F11E635F4E0081591A /* AccountType.swift */; };
@@ -50,6 +53,9 @@
 		9CE80E111E69255B00E11285 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CE80E131E69329F00E11285 /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		9CECA0DB1E70BA970019A1F0 /* WaterCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterCondition.swift; sourceTree = "<group>"; };
+		9CECA0DD1E70C5B80019A1F0 /* WaterOverallCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterOverallCondition.swift; sourceTree = "<group>"; };
+		9CECA0DF1E70C73C0019A1F0 /* WaterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterType.swift; sourceTree = "<group>"; };
+		9CECA0E11E70C8610019A1F0 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		9CF826EA1E634CE20081591A /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		9CF826EF1E635E480081591A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9CF826F11E635F4E0081591A /* AccountType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
@@ -120,6 +126,9 @@
 				9CF826F11E635F4E0081591A /* AccountType.swift */,
 				9CE80E131E69329F00E11285 /* MenuBar.swift */,
 				9CECA0DB1E70BA970019A1F0 /* WaterCondition.swift */,
+				9CECA0DD1E70C5B80019A1F0 /* WaterOverallCondition.swift */,
+				9CECA0DF1E70C73C0019A1F0 /* WaterType.swift */,
+				9CECA0E11E70C8610019A1F0 /* Location.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -394,6 +403,9 @@
 				9C475ADB1E62BA09002BF6B1 /* ProfileViewController.swift in Sources */,
 				9C9843D21E6D2D19001BBBD7 /* AccountTypeTableViewController.swift in Sources */,
 				9CF826F21E635F4E0081591A /* AccountType.swift in Sources */,
+				9CECA0E01E70C73C0019A1F0 /* WaterType.swift in Sources */,
+				9CECA0E21E70C8610019A1F0 /* Location.swift in Sources */,
+				9CECA0DE1E70C5B80019A1F0 /* WaterOverallCondition.swift in Sources */,
 				CEF2A5431E4F610500C604AC /* AppDelegate.swift in Sources */,
 				9CE80E141E69329F00E11285 /* MenuBar.swift in Sources */,
 				9CF826EB1E634CE20081591A /* LandingViewController.swift in Sources */,
