@@ -131,6 +131,62 @@
             </objects>
             <point key="canvasLocation" x="818" y="919"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="ak5-SA-HW7">
+            <objects>
+                <viewController id="5wa-cN-i6a" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3iZ-SD-xtQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cra-pJ-Lgy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6CX-oo-ZBs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="MfN-VF-LBy" userLabel="WaterReport"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WNP-tc-P0B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1767" y="2124"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FZJ-da-8ag">
+            <objects>
+                <viewController id="Phx-fC-1nY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pKk-em-C2L"/>
+                        <viewControllerLayoutGuide type="bottom" id="aQR-DW-dXi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HUh-sA-NqU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="Y9M-AW-zaG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7QY-6V-MZC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1767" y="1469"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Xwo-nE-XrS">
+            <objects>
+                <tabBarController id="CrT-2f-83o" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Mli-CG-N7O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Phx-fC-1nY" kind="relationship" relationship="viewControllers" id="H2h-eO-May"/>
+                        <segue destination="5wa-cN-i6a" kind="relationship" relationship="viewControllers" id="jdt-wx-vmr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="brm-0c-Res" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817" y="1796"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="IPm-1K-xZG">
             <objects>
@@ -208,7 +264,7 @@
         <scene sceneID="sN4-mh-fVa">
             <objects>
                 <navigationController id="SIb-Tm-cyr" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="YN3-59-utG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YN3-59-utG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -397,7 +453,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YXy-wN-h9i" id="Adb-4q-Lnn">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -475,7 +531,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KuX-Nw-2yM" id="ZlT-Qr-2lK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -489,7 +545,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7sn-ya-3a7" id="mmS-Kv-TS6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
