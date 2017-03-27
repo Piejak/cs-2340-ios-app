@@ -80,7 +80,17 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.textLabel?.text = mylist[indexPath.row]
+        
+        ref?.child("users").queryOrderedByKey().observeSingleEvent(of:.childAdded, with: { (snapshot) in
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+
+                let accountType = dictionary["AccountType"] as? String
+                cell.textLabel?.text = accountType
+            }
+        })
+        // todo the font size
+//        cell.textLabel?.font = [ UIFont .boldSystemFont(ofSize: 16)];
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     

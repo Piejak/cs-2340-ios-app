@@ -52,21 +52,7 @@ class WaterSourceReportViewController: UIViewController, UITableViewDelegate, UI
         
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let ref = FIRDatabase.database().reference()
-        let vcName = accountType[indexPath.row]
-        ref.child("users").observeSingleEvent(of: .value, with: { (snapshot) in
-            if let result = snapshot.children.allObjects as? [FIRDataSnapshot] {
-                for child in result {
-                    var userKey = child.key
-                    ref.child("users").child(userKey).child("AccountType").setValue(vcName)
-                    let ProfileVC = self.storyboard?.instantiateViewController(withIdentifier: "ProfileVC")
-                    self.navigationController?.pushViewController(ProfileVC!, animated: false)
-                }
-            }
-        })
-    }
-
+    
     
 
     /*
