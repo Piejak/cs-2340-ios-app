@@ -12,6 +12,7 @@
 		9C19B7441E62AA8800D54356 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19B7431E62AA8800D54356 /* LoginViewController.swift */; };
 		9C19B7461E62AAC100D54356 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19B7451E62AAC100D54356 /* RegisterViewController.swift */; };
 		9C475ADB1E62BA09002BF6B1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C475ADA1E62BA09002BF6B1 /* ProfileViewController.swift */; };
+		9C69A18D1E889E29000D01A3 /* WaterSourceReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A18C1E889E29000D01A3 /* WaterSourceReport.swift */; };
 		9C9843D21E6D2D19001BBBD7 /* AccountTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9843D11E6D2D19001BBBD7 /* AccountTypeTableViewController.swift */; };
 		9CB3BADB1E6748F000F6C958 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB3BADA1E6748F000F6C958 /* AdSupport.framework */; };
 		9CB6AB8A1E628C190031174E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CB6AB891E628C190031174E /* GoogleService-Info.plist */; };
@@ -21,6 +22,10 @@
 		9CECA0DE1E70C5B80019A1F0 /* WaterOverallCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECA0DD1E70C5B80019A1F0 /* WaterOverallCondition.swift */; };
 		9CECA0E01E70C73C0019A1F0 /* WaterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECA0DF1E70C73C0019A1F0 /* WaterType.swift */; };
 		9CECA0E21E70C8610019A1F0 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECA0E11E70C8610019A1F0 /* Location.swift */; };
+		9CECA0E61E71CDE80019A1F0 /* Circled User Male_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CECA0E51E71CDE80019A1F0 /* Circled User Male_000000_25.png */; };
+		9CECA0E81E71CDFD0019A1F0 /* Home_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CECA0E71E71CDFD0019A1F0 /* Home_000000_25.png */; };
+		9CECA0EA1E71CE1D0019A1F0 /* Edit_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CECA0E91E71CE1D0019A1F0 /* Edit_000000_25.png */; };
+		9CECA0F01E71F0870019A1F0 /* NevigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECA0EF1E71F0870019A1F0 /* NevigationViewController.swift */; };
 		9CF826EB1E634CE20081591A /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF826EA1E634CE20081591A /* LandingViewController.swift */; };
 		9CF826F01E635E480081591A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF826EF1E635E480081591A /* User.swift */; };
 		9CF826F21E635F4E0081591A /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF826F11E635F4E0081591A /* AccountType.swift */; };
@@ -47,6 +52,7 @@
 		9C19B7431E62AA8800D54356 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9C19B7451E62AAC100D54356 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9C475ADA1E62BA09002BF6B1 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9C69A18C1E889E29000D01A3 /* WaterSourceReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterSourceReport.swift; sourceTree = "<group>"; };
 		9C9843D11E6D2D19001BBBD7 /* AccountTypeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTypeTableViewController.swift; sourceTree = "<group>"; };
 		9CB3BADA1E6748F000F6C958 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		9CB6AB891E628C190031174E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -56,6 +62,10 @@
 		9CECA0DD1E70C5B80019A1F0 /* WaterOverallCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterOverallCondition.swift; sourceTree = "<group>"; };
 		9CECA0DF1E70C73C0019A1F0 /* WaterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterType.swift; sourceTree = "<group>"; };
 		9CECA0E11E70C8610019A1F0 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		9CECA0E51E71CDE80019A1F0 /* Circled User Male_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Circled User Male_000000_25.png"; path = "../../Documents/com.visualpharm.Icons8/ios/People/Circled User Male_000000_25.png"; sourceTree = "<group>"; };
+		9CECA0E71E71CDFD0019A1F0 /* Home_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Home_000000_25.png; path = "../../Documents/com.visualpharm.Icons8/ios/Very Basic/Home_000000_25.png"; sourceTree = "<group>"; };
+		9CECA0E91E71CE1D0019A1F0 /* Edit_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Edit_000000_25.png; path = ../../Documents/com.visualpharm.Icons8/ios/Editing/Edit_000000_25.png; sourceTree = "<group>"; };
+		9CECA0EF1E71F0870019A1F0 /* NevigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NevigationViewController.swift; sourceTree = "<group>"; };
 		9CF826EA1E634CE20081591A /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		9CF826EF1E635E480081591A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9CF826F11E635F4E0081591A /* AccountType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
@@ -105,6 +115,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9CECA0EB1E71CE350019A1F0 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				9CECA0E51E71CDE80019A1F0 /* Circled User Male_000000_25.png */,
+				9CECA0E91E71CE1D0019A1F0 /* Edit_000000_25.png */,
+				9CECA0E71E71CDFD0019A1F0 /* Home_000000_25.png */,
+			);
+			name = Icon;
+			sourceTree = "<group>";
+		};
 		9CF826EC1E6358730081591A /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +135,7 @@
 				9C475ADA1E62BA09002BF6B1 /* ProfileViewController.swift */,
 				9CF826EA1E634CE20081591A /* LandingViewController.swift */,
 				9C9843D11E6D2D19001BBBD7 /* AccountTypeTableViewController.swift */,
+				9CECA0EF1E71F0870019A1F0 /* NevigationViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -129,6 +150,7 @@
 				9CECA0DD1E70C5B80019A1F0 /* WaterOverallCondition.swift */,
 				9CECA0DF1E70C73C0019A1F0 /* WaterType.swift */,
 				9CECA0E11E70C8610019A1F0 /* Location.swift */,
+				9C69A18C1E889E29000D01A3 /* WaterSourceReport.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -136,6 +158,7 @@
 		9CF826EE1E635D2D0081591A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9CECA0EB1E71CE350019A1F0 /* Icon */,
 				9CE80E101E69255B00E11285 /* Main.storyboard */,
 				9CB6AB891E628C190031174E /* GoogleService-Info.plist */,
 				CEF2A5491E4F610500C604AC /* Assets.xcassets */,
@@ -285,7 +308,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF2A54D1E4F610500C604AC /* LaunchScreen.storyboard in Resources */,
+				9CECA0E81E71CDFD0019A1F0 /* Home_000000_25.png in Resources */,
+				9CECA0EA1E71CE1D0019A1F0 /* Edit_000000_25.png in Resources */,
 				9CB6AB8A1E628C190031174E /* GoogleService-Info.plist in Resources */,
+				9CECA0E61E71CDE80019A1F0 /* Circled User Male_000000_25.png in Resources */,
 				CEF2A54A1E4F610500C604AC /* Assets.xcassets in Resources */,
 				9CE80E121E69255B00E11285 /* Main.storyboard in Resources */,
 			);
@@ -400,6 +426,7 @@
 			files = (
 				9C19B7441E62AA8800D54356 /* LoginViewController.swift in Sources */,
 				CEF2A5451E4F610500C604AC /* ViewController.swift in Sources */,
+				9C69A18D1E889E29000D01A3 /* WaterSourceReport.swift in Sources */,
 				9C475ADB1E62BA09002BF6B1 /* ProfileViewController.swift in Sources */,
 				9C9843D21E6D2D19001BBBD7 /* AccountTypeTableViewController.swift in Sources */,
 				9CF826F21E635F4E0081591A /* AccountType.swift in Sources */,
@@ -409,6 +436,7 @@
 				CEF2A5431E4F610500C604AC /* AppDelegate.swift in Sources */,
 				9CE80E141E69329F00E11285 /* MenuBar.swift in Sources */,
 				9CF826EB1E634CE20081591A /* LandingViewController.swift in Sources */,
+				9CECA0F01E71F0870019A1F0 /* NevigationViewController.swift in Sources */,
 				9C19B7461E62AAC100D54356 /* RegisterViewController.swift in Sources */,
 				9CF826F01E635E480081591A /* User.swift in Sources */,
 				9CECA0DC1E70BA970019A1F0 /* WaterCondition.swift in Sources */,

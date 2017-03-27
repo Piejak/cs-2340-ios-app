@@ -39,6 +39,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var myTextField: UITextField!
     
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = FIRDatabase.database().reference()
@@ -102,8 +104,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                 }
             }
         })
-
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
