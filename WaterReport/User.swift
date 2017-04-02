@@ -34,4 +34,6 @@ struct User {
         uid = (snapshot.value! as! NSDictionary)["uid"] as! String
     }
     
+    
+    
 }

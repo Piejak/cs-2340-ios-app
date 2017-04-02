@@ -1,20 +1,18 @@
 //
-//  LandingViewController.swift
+//  WaterReportListViewController.swift
 //  WaterReport
 //
-//  Created by Hui Li on 2/26/17.
+//  Created by Hui Li on 4/1/17.
 //  Copyright © 2017 Brian Piejak. All rights reserved.
 //
 
 import UIKit
-import FirebaseAuth
 
-
-
-class LandingViewController: UIViewController {
+class WaterReportListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
@@ -23,19 +21,11 @@ class LandingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    @IBAction func LogOutAction(_ sender: AnyObject) {
-        if FIRAuth.auth()?.currentUser != nil {
-        do {
-            try? FIRAuth.auth()!.signOut()
-            
-            if FIRAuth.auth()?.currentUser == nil {
-                let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login") as! LoginViewController
-                self.present(loginVC, animated: true, completion: nil)
-                }
-            }
-        }
+    @IBAction func createReport(_ sender: AnyObject) {
+        let waterReportVC = storyboard?.instantiateViewController(withIdentifier: "WaterSourceReport")
+        self.navigationController?.pushViewController(waterReportVC!, animated: true)
     }
+
     /*
     // MARK: - Navigation
 

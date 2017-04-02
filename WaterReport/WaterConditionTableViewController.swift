@@ -2,7 +2,7 @@
 //  WaterConditionTableViewController.swift
 //  WaterReport
 //
-//  Created by 李辉 on 3/26/17.
+//  Created by Hui Li on 3/26/17.
 //  Copyright © 2017 Brian Piejak. All rights reserved.
 //
 

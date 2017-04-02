@@ -14,4 +14,5 @@ enum WaterCondition : String {
     case TreatableClear = "Treatable-Clear"
     case TreatableMuddy = "Treatable-Muddy"
     case Potable = "Potable"
+    case Default = "Default"
 }

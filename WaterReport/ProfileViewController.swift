@@ -83,7 +83,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         ref?.child("users").queryOrderedByKey().observeSingleEvent(of:.childAdded, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String: AnyObject] {
-
                 let accountType = dictionary["AccountType"] as? String
                 cell.textLabel?.text = accountType
             }
@@ -102,6 +101,12 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
+    @IBAction func Cancel(_ sender: AnyObject){
+        let vc: [UIViewController] = (self.navigationController?.viewControllers)!
+        
+        self.navigationController?.popToViewController(vc[0], animated: true)
+        
+    }
     
     @IBAction func ChangeProfile(_ sender: AnyObject) {
         ref = FIRDatabase.database().reference()

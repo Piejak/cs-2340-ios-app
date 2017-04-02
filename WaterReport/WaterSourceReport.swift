@@ -12,13 +12,13 @@ import Foundation
 class WaterSourceReport {
     var location : Location
     var date : Date
-    var reporter : User
+    var reporter : String
     var waterType : WaterType
     var waterCondition : WaterCondition
     var number : Int;
     
     
-    init(location : Location, date : Date, reporter : User, waterType : WaterType, waterCondition : WaterCondition, number : Int ) {
+    init(location : Location, date : Date, reporter : String, waterType : WaterType, waterCondition : WaterCondition, number : Int ) {
         self.location = location
         self.date = date
         self.reporter = reporter

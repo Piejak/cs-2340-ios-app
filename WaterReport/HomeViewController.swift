@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  LandingViewController.swift
 //  WaterReport
 //
 //  Created by Hui Li on 2/26/17.
@@ -7,17 +7,14 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
 
-class LoginViewController: UIViewController {
 
-    @IBOutlet weak var Email: UITextField!
-    
-    
-    @IBOutlet weak var Password: UITextField!
+
+class HomeViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -26,21 +23,8 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    @IBAction func login(_ sender: AnyObject) {
-        FIRAuth.auth()?.signIn(withEmail:Email.text!, password: Password.text!, completion: {
-                user, error in
-                if error != nil {
-                    print("Incorrect")
-                }
-                    
-                else {
-                  
-            }
-        })
-    }
 
+    
     /*
     // MARK: - Navigation
 

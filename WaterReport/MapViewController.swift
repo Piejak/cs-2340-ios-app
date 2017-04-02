@@ -1,14 +1,14 @@
 //
-//  NevigationViewController.swift
+//  MapViewController.swift
 //  WaterReport
 //
-//  Created by Hui Li on 3/9/17.
+//  Created by 李辉 on 4/1/17.
 //  Copyright © 2017 Brian Piejak. All rights reserved.
 //
 
 import UIKit
 
-class NevigationViewController: UINavigationController {
+class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +21,6 @@ class NevigationViewController: UINavigationController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-//    var myBackButton:UIButton = UIButton.withType(UIButtonType.custom) as UIButton
-//    myBackButton.addTarget(self, action: "popToRoot:", forControlEvents: UIControlEvents.TouchUpInside)
-//    myBackButton.setTitle("Back", forState: UIControlState.Normal)
-//    myBackButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
-//    myBackButton.sizeToFit()
-//    var myCustomBackButtonItem:UIBarButtonItem = UIBarButtonItem(customView: myBackButton)
-//    self.navigationItem.leftBarButtonItem  = myCustomBackButtonItem
-
 
     /*
     // MARK: - Navigation

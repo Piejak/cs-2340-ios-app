@@ -28,6 +28,13 @@ class AccountTypeTableViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+//        var myBackButton:UIButton = UIButton.withType(UIButtonType.custom) as UIButton
+//        myBackButton.addTarget(self, action: "popToRoot:", forControlEvents: UIControlEvents.TouchUpInside)
+//        myBackButton.setTitle("Back", forState: UIControlState.Normal)
+//        myBackButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+//        myBackButton.sizeToFit()
+//        var myCustomBackButtonItem:UIBarButtonItem = UIBarButtonItem(customView: myBackButton)
+//        self.navigationItem.leftBarButtonItem  = myCustomBackButtonItem
         // Dispose of any resources that can be recreated.
     }
 

@@ -1,20 +1,15 @@
 //
-//  LoginViewController.swift
+//  NevigationViewController.swift
 //  WaterReport
 //
-//  Created by Hui Li on 2/26/17.
+//  Created by Hui Li on 3/9/17.
 //  Copyright © 2017 Brian Piejak. All rights reserved.
 //
 
 import UIKit
-import Firebase
 
-class LoginViewController: UIViewController {
+class NevigationViewController: UINavigationController {
 
-    @IBOutlet weak var Email: UITextField!
-    
-    
-    @IBOutlet weak var Password: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,19 +22,8 @@ class LoginViewController: UIViewController {
     }
     
     
-    
-    @IBAction func login(_ sender: AnyObject) {
-        FIRAuth.auth()?.signIn(withEmail:Email.text!, password: Password.text!, completion: {
-                user, error in
-                if error != nil {
-                    print("Incorrect")
-                }
-                    
-                else {
-                  
-            }
-        })
-    }
+
+
 
     /*
     // MARK: - Navigation

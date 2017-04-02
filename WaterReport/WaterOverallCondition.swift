@@ -12,4 +12,5 @@ enum WaterOverallCondition : String {
     case Safe = "Safe"
     case Treatable = "Treatable"
     case Unsafe = "Unsafe"
+    case Default = "Default"
 }
