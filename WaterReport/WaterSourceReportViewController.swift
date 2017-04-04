@@ -41,7 +41,9 @@ class WaterSourceReportViewController: UIViewController, UITableViewDelegate, UI
     @IBOutlet weak var LongitudeTextView: UITextField!
     @IBOutlet weak var LatitudeTextView: UITextField!
     var typeList:[String] = ["Water Type"]
+    var typeIdentities:[String] = ["WaterTypeTable"]
     var ConditionList:[String] = ["Water Condition"]
+    var conditionIdentities:[String] = ["WaterConditionTable"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,20 +82,34 @@ class WaterSourceReportViewController: UIViewController, UITableViewDelegate, UI
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (tableView == self.typeTableView) {
+            let vcName = typeIdentities[indexPath.row]
+            let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+            self.navigationController?.pushViewController(viewController!, animated: true)
+        } else {
+            let vcName = conditionIdentities[indexPath.row]
+            let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+            self.navigationController?.pushViewController(viewController!, animated: true)
+        }
+    }
+    
     
     
     @IBAction func CreateWaterReport(_ sender: AnyObject) {
         
-//        let reportLatitude = Double(LatitudeTextView.text!)
-//        let reportLongitude = Double(LongitudeTextView.text!)
-//        let reportLocation = Location(latitude: reportLatitude!, longitude: reportLongitude!)
+        let reportLatitude = Double(LatitudeTextView.text!)
+        let reportLongitude = Double(LongitudeTextView.text!)
+        let reportLocation = Location(latitude: reportLatitude!, longitude: reportLongitude!)
         let currentDateTime = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateString = dateFormatter.string(from: currentDateTime)
         let user = FIRAuth.auth()?.currentUser
         let uid = user?.uid
-//        var waterSourceReport: WaterSourceReport = WaterSourceReport(location: reportLocation, date: currentDateTime , reporter: uid!, waterType: WaterType(rawValue: waterType)!, waterCondition: WaterCondition(rawValue: waterCondition)!, number: 1)
         let ref = FIRDatabase.database().reference()
-//        let userInfo = ["Email": user?.email, "Name": "", "Age": "", "Address": "", "Affiliation": "", "AccountType": AccountType.Default.rawValue, "uid": user?.uid]
-        ref.child("report").childByAutoId().setValue(uid)
+        let reportInfo = ["Location": reportLocation.toArray(), "Date": dateString, "reporter": uid, "waterCondition": "Default", "waterType": "Default",] as [String : Any]
+        ref.child("report").childByAutoId().setValue(reportInfo)
         
     }
     

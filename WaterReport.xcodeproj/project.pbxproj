@@ -18,9 +18,9 @@
 		9C69A1931E88A938000D01A3 /* WaterConditionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A1921E88A938000D01A3 /* WaterConditionTableViewController.swift */; };
 		9C69A1961E88C215000D01A3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A1941E88C215000D01A3 /* CustomTableViewCell.swift */; };
 		9C69A1971E88C215000D01A3 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C69A1951E88C215000D01A3 /* CustomTableViewCell.xib */; };
+		9C96E9791E91D4C5004724AA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96E9781E91D4C5004724AA /* MapViewController.swift */; };
 		9C9843D21E6D2D19001BBBD7 /* AccountTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9843D11E6D2D19001BBBD7 /* AccountTypeTableViewController.swift */; };
 		9CA28EAF1E908CCB00CD1B7E /* WaterReportListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA28EAE1E908CCB00CD1B7E /* WaterReportListViewController.swift */; };
-		9CACF1AB1E9078AE00E7E1AF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CACF1AA1E9078AE00E7E1AF /* MapViewController.swift */; };
 		9CACF1AD1E90790D00E7E1AF /* Google Maps_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CACF1AC1E90790D00E7E1AF /* Google Maps_000000_25.png */; };
 		9CB3BADB1E6748F000F6C958 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB3BADA1E6748F000F6C958 /* AdSupport.framework */; };
 		9CB6AB8A1E628C190031174E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CB6AB891E628C190031174E /* GoogleService-Info.plist */; };
@@ -66,9 +66,9 @@
 		9C69A1921E88A938000D01A3 /* WaterConditionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterConditionTableViewController.swift; sourceTree = "<group>"; };
 		9C69A1941E88C215000D01A3 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		9C69A1951E88C215000D01A3 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		9C96E9781E91D4C5004724AA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9C9843D11E6D2D19001BBBD7 /* AccountTypeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTypeTableViewController.swift; sourceTree = "<group>"; };
 		9CA28EAE1E908CCB00CD1B7E /* WaterReportListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterReportListViewController.swift; sourceTree = "<group>"; };
-		9CACF1AA1E9078AE00E7E1AF /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9CACF1AC1E90790D00E7E1AF /* Google Maps_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Google Maps_000000_25.png"; path = "../../Documents/com.visualpharm.Icons8/ios/Logos/Google Maps_000000_25.png"; sourceTree = "<group>"; };
 		9CB3BADA1E6748F000F6C958 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		9CB6AB891E628C190031174E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -165,8 +165,8 @@
 				9C69A18E1E88A43A000D01A3 /* WaterSourceReportViewController.swift */,
 				9C69A1901E88A90C000D01A3 /* WaterTypeTableViewController.swift */,
 				9C69A1921E88A938000D01A3 /* WaterConditionTableViewController.swift */,
-				9CACF1AA1E9078AE00E7E1AF /* MapViewController.swift */,
 				9CA28EAE1E908CCB00CD1B7E /* WaterReportListViewController.swift */,
+				9C96E9781E91D4C5004724AA /* MapViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -469,9 +469,9 @@
 				9C69A1911E88A90C000D01A3 /* WaterTypeTableViewController.swift in Sources */,
 				9C69A1931E88A938000D01A3 /* WaterConditionTableViewController.swift in Sources */,
 				9CECA0E21E70C8610019A1F0 /* Location.swift in Sources */,
+				9C96E9791E91D4C5004724AA /* MapViewController.swift in Sources */,
 				9CECA0DE1E70C5B80019A1F0 /* WaterOverallCondition.swift in Sources */,
 				CEF2A5431E4F610500C604AC /* AppDelegate.swift in Sources */,
-				9CACF1AB1E9078AE00E7E1AF /* MapViewController.swift in Sources */,
 				9CA28EAF1E908CCB00CD1B7E /* WaterReportListViewController.swift in Sources */,
 				9CE80E141E69329F00E11285 /* MenuBar.swift in Sources */,
 				9C69A18F1E88A43A000D01A3 /* WaterSourceReportViewController.swift in Sources */,

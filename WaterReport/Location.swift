@@ -18,6 +18,12 @@ class Location {
         self.longitude = longitude
     }
     
+    func toArray() -> Array<Any>{
+        let arr = [latitude, longitude]
+        return arr
+    }
+    
+    
     
     
     

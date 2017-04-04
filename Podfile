@@ -20,6 +20,12 @@ target 'WaterReport' do
   pod 'TwitterKit'
   
   
+  # Pods for google map
+  source 'https://github.com/CocoaPods/Specs.git'
+  platform :ios, '8.1'
+  pod 'GoogleMaps'
+  
+  
   
   target 'WaterReportTests' do
     inherit! :search_paths
