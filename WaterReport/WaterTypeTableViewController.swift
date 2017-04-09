@@ -2,14 +2,21 @@
 //  WaterTypeTableViewController.swift
 //  WaterReport
 //
-//  Created by 李辉 on 3/26/17.
+//  Created by Hui Li on 3/26/17.
 //  Copyright © 2017 Brian Piejak. All rights reserved.
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseStorage
+import FirebaseAuth
+
+
 
 class WaterTypeTableViewController: UITableViewController {
-
+    
+    var waterTypeDelegate: WaterTypeProtocol?
+    var waterType : [String] = [WaterType.Bottled.rawValue, WaterType.Lake.rawValue, WaterType.Spring.rawValue, WaterType.Stream.rawValue, WaterType.Well.rawValue, WaterType.Other.rawValue]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,7 +26,7 @@ class WaterTypeTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -29,14 +36,30 @@ class WaterTypeTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return waterType.count
     }
 
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "WaterType")
+        cell.textLabel?.text = waterType[indexPath.row]
+        return cell
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let type = waterType[indexPath.row] as String
+        waterTypeDelegate?.setResultOfWaterType(valueSent: type)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

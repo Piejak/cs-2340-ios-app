@@ -9,8 +9,8 @@
 import Foundation
 
 class Location {
-    var latitude : Double
-    var longitude : Double
+    var latitude : Double!
+    var longitude : Double!
     
     
     init(latitude: Double, longitude : Double) {
@@ -18,9 +18,8 @@ class Location {
         self.longitude = longitude
     }
     
-    func toArray() -> Array<Any>{
-        let arr = [latitude, longitude]
-        return arr
+    func toArray() -> [AnyHashable:Any]{
+        return ["Latitude" : latitude, "Longitude" : longitude] as [AnyHashable:Any]
     }
     
     

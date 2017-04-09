@@ -49,6 +49,7 @@ class AccountTypeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return accountType.count
     }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = UITableViewCell(style: .default, reuseIdentifier: "AccountType")
         cell.textLabel?.text = accountType[indexPath.row]

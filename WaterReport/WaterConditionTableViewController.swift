@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseStorage
+import FirebaseAuth
 
 class WaterConditionTableViewController: UITableViewController {
-
+    
+    
+    var waterConditionDelegate: WaterconditionProtocol?
+    var waterCondition :[String] = [WaterCondition.Potable.rawValue, WaterCondition.TreatableClear.rawValue, WaterCondition.TreatableMuddy.rawValue, WaterCondition.Waste.rawValue]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,14 +37,28 @@ class WaterConditionTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return waterCondition.count
     }
 
+    
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "WaterCondition")
+        cell.textLabel?.text = waterCondition[indexPath.row]
+        return cell
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let condition = waterCondition[indexPath.row] as String
+        waterConditionDelegate?.setResultOfWaterWaterCondition(valueSent: condition)
+        self.navigationController?.popViewController(animated: true)
+    }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

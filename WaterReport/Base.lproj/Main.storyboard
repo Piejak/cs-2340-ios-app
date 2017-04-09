@@ -189,7 +189,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="PRL-AY-tv1">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WaterCondition" id="PRL-AY-tv1">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PRL-AY-tv1" id="h6f-Tj-HaB">
@@ -206,14 +206,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zcq-Vc-wUF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5074" y="2627"/>
+            <point key="canvasLocation" x="4910" y="3351"/>
         </scene>
         <!--Profile-->
         <scene sceneID="c7h-70-Fqf">
             <objects>
                 <navigationController id="WSE-gP-pZv" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="Circled User Male_000000_25.png" id="5wx-VN-Xba" userLabel="Profile"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pLR-JT-LDC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="pLR-JT-LDC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -234,7 +234,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xIU-GH-vk6">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WaterType" id="xIU-GH-vk6">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xIU-GH-vk6" id="ztV-Fa-oqg">
@@ -251,7 +251,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aa2-lm-uex" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5073" y="3386"/>
+            <point key="canvasLocation" x="4910" y="2663"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Xwo-nE-XrS">
@@ -503,7 +503,7 @@
             <objects>
                 <navigationController id="uNE-Mt-CpQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Report" image="Edit_000000_25.png" id="paY-sd-2bD"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CqI-cz-bU9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="CqI-cz-bU9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

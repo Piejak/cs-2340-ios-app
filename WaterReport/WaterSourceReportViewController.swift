@@ -12,38 +12,39 @@ import FirebaseStorage
 import FirebaseAuth
 
 
-class WaterSourceReportViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+protocol WaterTypeProtocol {
+    func setResultOfWaterType(valueSent: String)
+}
+protocol WaterconditionProtocol {
+    func setResultOfWaterWaterCondition(valueSent: String)
+}
+class WaterSourceReportViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,WaterTypeProtocol, WaterconditionProtocol{
     
+    internal func setResultOfWaterType(valueSent: String) {
+        self.typeDefaultValue = valueSent
+        print(typeDefaultValue)
+    }
+    
+    internal func setResultOfWaterWaterCondition(valueSent: String) {
+        self.conditionDefaultValue = valueSent
+        print(typeDefaultValue)
+    }
+
     var typeDefaultValue: String = "Default"
     var conditionDefaultValue: String = "Default"
+    var valueSentFromWaterTypeViewController:String?
+    var valueSentFromWaterConditionViewController:String?
+    var reportNumber: Int = 0
     
-    var waterType: String {
-        get {
-            return typeDefaultValue
-        }
-        set {
-            typeDefaultValue = newValue
-        }
-    }
-    
-    var waterCondition: String {
-        
-        get {
-            return conditionDefaultValue
-        }
-        set {
-            conditionDefaultValue = newValue
-        }
-    }
     
     @IBOutlet weak var typeTableView: UITableView!
     @IBOutlet weak var conditionTableView: UITableView!
     @IBOutlet weak var LongitudeTextView: UITextField!
     @IBOutlet weak var LatitudeTextView: UITextField!
     var typeList:[String] = ["Water Type"]
-    var typeIdentities:[String] = ["WaterTypeTable"]
     var ConditionList:[String] = ["Water Condition"]
-    var conditionIdentities:[String] = ["WaterConditionTable"]
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,11 +54,19 @@ class WaterSourceReportViewController: UIViewController, UITableViewDelegate, UI
         self.conditionTableView.dataSource = self
         self.typeTableView.separatorStyle = .none
         self.conditionTableView.separatorStyle = .none
-        typeList[0] = waterType
-        ConditionList[0] = waterCondition
+        typeList[0] = typeDefaultValue
+        ConditionList[0] = conditionDefaultValue
         // Do any additional setup after loading the view.
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        typeList[0] = typeDefaultValue
+        ConditionList[0] = conditionDefaultValue
+        self.typeTableView.reloadData()
+        self.conditionTableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -84,13 +93,15 @@ class WaterSourceReportViewController: UIViewController, UITableViewDelegate, UI
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (tableView == self.typeTableView) {
-            let vcName = typeIdentities[indexPath.row]
-            let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
-            self.navigationController?.pushViewController(viewController!, animated: true)
+            let vcName = "WaterTypeTable"
+            let viewController = storyboard?.instantiateViewController(withIdentifier: vcName) as! WaterTypeTableViewController
+            viewController.waterTypeDelegate = self
+            self.navigationController?.pushViewController(viewController, animated: true)
         } else {
-            let vcName = conditionIdentities[indexPath.row]
-            let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
-            self.navigationController?.pushViewController(viewController!, animated: true)
+            let vcName = "WaterConditionTable"
+            let viewController = storyboard?.instantiateViewController(withIdentifier: vcName) as! WaterConditionTableViewController
+            viewController.waterConditionDelegate = self
+            self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
     
@@ -108,8 +119,21 @@ class WaterSourceReportViewController: UIViewController, UITableViewDelegate, UI
         let user = FIRAuth.auth()?.currentUser
         let uid = user?.uid
         let ref = FIRDatabase.database().reference()
-        let reportInfo = ["Location": reportLocation.toArray(), "Date": dateString, "reporter": uid, "waterCondition": "Default", "waterType": "Default",] as [String : Any]
-        ref.child("report").childByAutoId().setValue(reportInfo)
+        
+        
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                if let reportNum = dictionary["reportNo"] as? Any {
+                    self.reportNumber = reportNum as! Int
+                    self.reportNumber = self.reportNumber + 1
+                }
+            }
+        })
+        
+        let reportInfo = ["Location": reportLocation.toArray(), "Date": dateString, "reporter": uid, "waterCondition": conditionDefaultValue, "waterType": typeDefaultValue, "ReportNumber" : self.reportNumber + 1] as [String : Any]
+        ref.child("reportNo").setValue(reportNumber + 1)
+        ref.child("WaterSourceReport").childByAutoId().setValue(reportInfo)
         
     }
     
