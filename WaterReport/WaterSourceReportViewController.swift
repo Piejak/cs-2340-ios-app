@@ -127,7 +127,7 @@ class WaterSourceReportViewController: UIViewController, UITableViewDelegate, UI
                 if let reportNum = dictionary["reportNo"] as? Any {
                     self.reportNumber = reportNum as! Int
                     self.reportNumber = self.reportNumber + 1
-                    let reportInfo = ["Location": reportLocation.toArray(), "Date": dateString, "reporter": uid, "waterCondition": self.conditionDefaultValue, "waterType": self.typeDefaultValue, "ReportNumber" : self.reportNumber] as [String : Any]
+                    let reportInfo = ["location": reportLocation.toArray(), "date": dateString, "reporter": uid!, "waterCondition": self.conditionDefaultValue, "waterType": self.typeDefaultValue, "reportNumber" : self.reportNumber] as [String : Any]
                     ref.child("reportNo").setValue(self.reportNumber)
                     ref.child("WaterSourceReport").childByAutoId().setValue(reportInfo)
                 }
