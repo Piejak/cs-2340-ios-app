@@ -127,14 +127,12 @@ class WaterSourceReportViewController: UIViewController, UITableViewDelegate, UI
                 if let reportNum = dictionary["reportNo"] as? Any {
                     self.reportNumber = reportNum as! Int
                     self.reportNumber = self.reportNumber + 1
+                    let reportInfo = ["Location": reportLocation.toArray(), "Date": dateString, "reporter": uid, "waterCondition": self.conditionDefaultValue, "waterType": self.typeDefaultValue, "ReportNumber" : self.reportNumber] as [String : Any]
+                    ref.child("reportNo").setValue(self.reportNumber)
+                    ref.child("WaterSourceReport").childByAutoId().setValue(reportInfo)
                 }
             }
         })
-        
-        let reportInfo = ["Location": reportLocation.toArray(), "Date": dateString, "reporter": uid, "waterCondition": conditionDefaultValue, "waterType": typeDefaultValue, "ReportNumber" : self.reportNumber + 1] as [String : Any]
-        ref.child("reportNo").setValue(reportNumber + 1)
-        ref.child("WaterSourceReport").childByAutoId().setValue(reportInfo)
-        
     }
     
 //        @IBAction func CreateAccount(_ sender: AnyObject) {
