@@ -43,7 +43,7 @@ class WaterReportListViewController: UIViewController,UITableViewDelegate, UITab
     
     
     func fillList() {
-        FIRDatabase.database().reference().child("WaterSourceReport").observe(.childAdded, with: { (snapshot) in
+ FIRDatabase.database().reference().child("WaterSourceReport").observe(.childAdded, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 let report = WaterSourceReport()
                 report.location = (dictionary["location"] as? [AnyHashable : Any]?)!
@@ -55,7 +55,6 @@ class WaterReportListViewController: UIViewController,UITableViewDelegate, UITab
                 self.reports.append(report)
                 self.reportListTable.reloadData()
             }
-            
         })
     }
     

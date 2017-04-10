@@ -17,7 +17,7 @@ struct User {
     var age: Int?
     var address: String?
     var affiliation: String?
-    var accountType: AccountType?
+    var accountType: AccountType!
     var uid: String!
     var key: String?
     var ref: FIRDatabaseReference?
