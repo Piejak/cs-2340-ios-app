@@ -20,7 +20,6 @@
 		9C96E9791E91D4C5004724AA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96E9781E91D4C5004724AA /* MapViewController.swift */; };
 		9C9843D21E6D2D19001BBBD7 /* AccountTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9843D11E6D2D19001BBBD7 /* AccountTypeTableViewController.swift */; };
 		9CA28EAF1E908CCB00CD1B7E /* WaterReportListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA28EAE1E908CCB00CD1B7E /* WaterReportListViewController.swift */; };
-		9CACF1AD1E90790D00E7E1AF /* Google Maps_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CACF1AC1E90790D00E7E1AF /* Google Maps_000000_25.png */; };
 		9CB3BADB1E6748F000F6C958 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB3BADA1E6748F000F6C958 /* AdSupport.framework */; };
 		9CB6AB8A1E628C190031174E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CB6AB891E628C190031174E /* GoogleService-Info.plist */; };
 		9CB904931E9B125C00D8F8F2 /* WaterSourceReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB904921E9B125C00D8F8F2 /* WaterSourceReport.swift */; };
@@ -30,10 +29,11 @@
 		9CECA0DE1E70C5B80019A1F0 /* WaterOverallCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECA0DD1E70C5B80019A1F0 /* WaterOverallCondition.swift */; };
 		9CECA0E01E70C73C0019A1F0 /* WaterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECA0DF1E70C73C0019A1F0 /* WaterType.swift */; };
 		9CECA0E21E70C8610019A1F0 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECA0E11E70C8610019A1F0 /* Location.swift */; };
-		9CECA0E61E71CDE80019A1F0 /* Circled User Male_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CECA0E51E71CDE80019A1F0 /* Circled User Male_000000_25.png */; };
-		9CECA0E81E71CDFD0019A1F0 /* Home_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CECA0E71E71CDFD0019A1F0 /* Home_000000_25.png */; };
-		9CECA0EA1E71CE1D0019A1F0 /* Edit_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CECA0E91E71CE1D0019A1F0 /* Edit_000000_25.png */; };
 		9CECA0F01E71F0870019A1F0 /* Profile_NevigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECA0EF1E71F0870019A1F0 /* Profile_NevigationViewController.swift */; };
+		9CF0730F1EA1686600683513 /* Circled User Male_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CF0730B1EA1686600683513 /* Circled User Male_000000_25.png */; };
+		9CF073101EA1686600683513 /* Edit_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CF0730C1EA1686600683513 /* Edit_000000_25.png */; };
+		9CF073111EA1686600683513 /* Google Maps_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CF0730D1EA1686600683513 /* Google Maps_000000_25.png */; };
+		9CF073121EA1686600683513 /* Home_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CF0730E1EA1686600683513 /* Home_000000_25.png */; };
 		9CF826EB1E634CE20081591A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF826EA1E634CE20081591A /* HomeViewController.swift */; };
 		9CF826F01E635E480081591A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF826EF1E635E480081591A /* User.swift */; };
 		9CF826F21E635F4E0081591A /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF826F11E635F4E0081591A /* AccountType.swift */; };
@@ -68,7 +68,6 @@
 		9C96E9781E91D4C5004724AA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9C9843D11E6D2D19001BBBD7 /* AccountTypeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTypeTableViewController.swift; sourceTree = "<group>"; };
 		9CA28EAE1E908CCB00CD1B7E /* WaterReportListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterReportListViewController.swift; sourceTree = "<group>"; };
-		9CACF1AC1E90790D00E7E1AF /* Google Maps_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Google Maps_000000_25.png"; path = "../../Documents/com.visualpharm.Icons8/ios/Logos/Google Maps_000000_25.png"; sourceTree = "<group>"; };
 		9CB3BADA1E6748F000F6C958 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		9CB6AB891E628C190031174E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9CB904921E9B125C00D8F8F2 /* WaterSourceReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterSourceReport.swift; sourceTree = "<group>"; };
@@ -78,10 +77,11 @@
 		9CECA0DD1E70C5B80019A1F0 /* WaterOverallCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterOverallCondition.swift; sourceTree = "<group>"; };
 		9CECA0DF1E70C73C0019A1F0 /* WaterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterType.swift; sourceTree = "<group>"; };
 		9CECA0E11E70C8610019A1F0 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		9CECA0E51E71CDE80019A1F0 /* Circled User Male_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Circled User Male_000000_25.png"; path = "../../Documents/com.visualpharm.Icons8/ios/People/Circled User Male_000000_25.png"; sourceTree = "<group>"; };
-		9CECA0E71E71CDFD0019A1F0 /* Home_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Home_000000_25.png; path = "../../Documents/com.visualpharm.Icons8/ios/Very Basic/Home_000000_25.png"; sourceTree = "<group>"; };
-		9CECA0E91E71CE1D0019A1F0 /* Edit_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Edit_000000_25.png; path = ../../Documents/com.visualpharm.Icons8/ios/Editing/Edit_000000_25.png; sourceTree = "<group>"; };
 		9CECA0EF1E71F0870019A1F0 /* Profile_NevigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile_NevigationViewController.swift; sourceTree = "<group>"; };
+		9CF0730B1EA1686600683513 /* Circled User Male_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Circled User Male_000000_25.png"; sourceTree = "<group>"; };
+		9CF0730C1EA1686600683513 /* Edit_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Edit_000000_25.png; sourceTree = "<group>"; };
+		9CF0730D1EA1686600683513 /* Google Maps_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google Maps_000000_25.png"; sourceTree = "<group>"; };
+		9CF0730E1EA1686600683513 /* Home_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home_000000_25.png; sourceTree = "<group>"; };
 		9CF826EA1E634CE20081591A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9CF826EF1E635E480081591A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9CF826F11E635F4E0081591A /* AccountType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
@@ -143,10 +143,10 @@
 		9CECA0EB1E71CE350019A1F0 /* Icon */ = {
 			isa = PBXGroup;
 			children = (
-				9CACF1AC1E90790D00E7E1AF /* Google Maps_000000_25.png */,
-				9CECA0E51E71CDE80019A1F0 /* Circled User Male_000000_25.png */,
-				9CECA0E91E71CE1D0019A1F0 /* Edit_000000_25.png */,
-				9CECA0E71E71CDFD0019A1F0 /* Home_000000_25.png */,
+				9CF0730B1EA1686600683513 /* Circled User Male_000000_25.png */,
+				9CF0730C1EA1686600683513 /* Edit_000000_25.png */,
+				9CF0730D1EA1686600683513 /* Google Maps_000000_25.png */,
+				9CF0730E1EA1686600683513 /* Home_000000_25.png */,
 			);
 			name = Icon;
 			sourceTree = "<group>";
@@ -340,14 +340,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF2A54D1E4F610500C604AC /* LaunchScreen.storyboard in Resources */,
-				9CECA0E81E71CDFD0019A1F0 /* Home_000000_25.png in Resources */,
-				9CACF1AD1E90790D00E7E1AF /* Google Maps_000000_25.png in Resources */,
-				9CECA0EA1E71CE1D0019A1F0 /* Edit_000000_25.png in Resources */,
+				9CF073121EA1686600683513 /* Home_000000_25.png in Resources */,
+				9CF0730F1EA1686600683513 /* Circled User Male_000000_25.png in Resources */,
+				9CF073101EA1686600683513 /* Edit_000000_25.png in Resources */,
 				9CB6AB8A1E628C190031174E /* GoogleService-Info.plist in Resources */,
-				9CECA0E61E71CDE80019A1F0 /* Circled User Male_000000_25.png in Resources */,
 				CEF2A54A1E4F610500C604AC /* Assets.xcassets in Resources */,
 				9C69A1971E88C215000D01A3 /* CustomTableViewCell.xib in Resources */,
 				9CE80E121E69255B00E11285 /* Main.storyboard in Resources */,
+				9CF073111EA1686600683513 /* Google Maps_000000_25.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
