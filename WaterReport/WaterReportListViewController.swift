@@ -19,6 +19,7 @@ class WaterReportListViewController: UIViewController,UITableViewDelegate, UITab
     override func viewDidLoad() {
         self.reportListTable.delegate = self
         self.reportListTable.dataSource = self
+        self.reportListTable.register(UITableViewCell.self, forCellReuseIdentifier: "customCell")
         super.viewDidLoad()
         fillList()
         // Do any additional setup after loading the view.
@@ -64,10 +65,16 @@ class WaterReportListViewController: UIViewController,UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "WaterSourceReport")
+//        let cell = UITableViewCell(style: .default, reuseIdentifier: "WaterSourceReport") as! CustomTableViewCell
+        let cell: CustomTableViewCell = self.reportListTable.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! CustomTableViewCell
         let report = self.reports[indexPath.row]
         let number = String(report.reportNumber!)
-        cell.textLabel?.text = number
+        cell.numbeLabel.text = number
+        cell.dateLabel.text = report.date
+//        cell.latitudeLabel.text = report.location.
+//        cell.longitudeLabel.text = report.location[1]
+        cell.waterConditionLabel.text = report.waterCondition
+        cell.waterTypeLabel.text = report.waterType
         return cell
     }
     

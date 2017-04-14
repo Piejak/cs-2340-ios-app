@@ -11,13 +11,13 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-struct User {
+struct User{
     
     var realname: String!
     var age: Int?
     var address: String?
     var affiliation: String?
-    var accountType: AccountType!
+    var accountType: AccountType?
     var uid: String!
     var key: String?
     var ref: FIRDatabaseReference?
