@@ -24,7 +24,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateData()
-        var size = self.reports.count - 1
+        var size = self.reports.count
         /*for index in 0...size {
             var lo = self.reports[index].location[AnyHashable("Longitude")] as! Double
             //var long = Double(lo)
@@ -54,24 +54,52 @@ class MapViewController: UIViewController {
             
         }*/
         
-        for i in 0...5 {
+        /*if (size > 0) {
+            for i in 0...size - 1 {
+                let lo = self.reports[i].location[AnyHashable("Longitude")]! as! Double
+                let la = self.reports[i].location[AnyHashable("Latitude")]! as! Double
+                
+                let location = CLLocationCoordinate2DMake(la, lo)
+                let annotation = MKPointAnnotation()
+                
+                annotation.coordinate = location
+                
+                
+                
+                //var num =  self.reports[index].reportNumber as! String
+                //var num =  self.reports[index].reportNumber
+                annotation.title = "reporter : " + self.reports[i].reporter + "; report Number: " + " " + String(i) + "; Date: " + "4/8"
+                
+                annotation.subtitle = "Water Type" + "lake" + "; Water Condition: " + "hi"
+                
+                map.addAnnotation(annotation)
+            }
+
+        }*/
+        var i = 0
+        while (i < size - 1) {
+            let lo = self.reports[i].location[AnyHashable("Longitude")]! as! Double
+            let la = self.reports[i].location[AnyHashable("Latitude")]! as! Double
             
-            let location = CLLocationCoordinate2DMake((Double(i) * 2), Double(i))
-            
+            let num = String(self.reports[i].reportNumber)
+            let location = CLLocationCoordinate2DMake(lo, la)
             let annotation = MKPointAnnotation()
             
             annotation.coordinate = location
             
             
             
-            //var num =  self.reports[index].reportNumber as! String
-            //var num =  self.reports[index].reportNumber
-            annotation.title = "reporter : " + "ha" + "; report Number: " + " " + String(i) + "; Date: " + "4/8"
             
-            annotation.subtitle = "Water Type" + "lake" + "; Water Condition: " + "hi"
+            
+           
+            annotation.title = "reporter : " + self.reports[i].reporter + "; report Number: " + " " + num + "; Date: " + self.reports[i].date
+            
+            annotation.subtitle = "Water Type" + self.reports[i].waterType + "; Water Condition: " + self.reports[i].waterCondition
             
             map.addAnnotation(annotation)
+            i = i + 1
         }
+        
         
         
         
