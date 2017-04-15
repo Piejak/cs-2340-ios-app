@@ -55,6 +55,7 @@ class WaterReportListViewController: UIViewController,UITableViewDelegate, UITab
                 report.waterType = dictionary["waterType"] as! String?
                 self.reports.append(report)
                 self.reportListTable.reloadData()
+                let a = (self.reports[0].date) as String
             }
         })
     }

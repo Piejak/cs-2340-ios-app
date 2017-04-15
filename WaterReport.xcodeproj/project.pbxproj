@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		32A0F84CB6E031713A399128 /* Pods_WaterReportTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91186217ADF1E94D161EEC2 /* Pods_WaterReportTests.framework */; };
+		4DDBA2651EA16C6D009635EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DDBA2641EA16C6D009635EA /* GoogleService-Info.plist */; };
 		725424E7D139DEB8EB0D4399 /* Pods_WaterReport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EE2E26E744DD2AAFB2CE3F /* Pods_WaterReport.framework */; };
 		9C19B7441E62AA8800D54356 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19B7431E62AA8800D54356 /* LoginViewController.swift */; };
 		9C19B7461E62AAC100D54356 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19B7451E62AAC100D54356 /* RegisterViewController.swift */; };
@@ -21,7 +22,6 @@
 		9C9843D21E6D2D19001BBBD7 /* AccountTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9843D11E6D2D19001BBBD7 /* AccountTypeTableViewController.swift */; };
 		9CA28EAF1E908CCB00CD1B7E /* WaterReportListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA28EAE1E908CCB00CD1B7E /* WaterReportListViewController.swift */; };
 		9CB3BADB1E6748F000F6C958 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB3BADA1E6748F000F6C958 /* AdSupport.framework */; };
-		9CB6AB8A1E628C190031174E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CB6AB891E628C190031174E /* GoogleService-Info.plist */; };
 		9CB904931E9B125C00D8F8F2 /* WaterSourceReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB904921E9B125C00D8F8F2 /* WaterSourceReport.swift */; };
 		9CE80E121E69255B00E11285 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE80E101E69255B00E11285 /* Main.storyboard */; };
 		9CE80E141E69329F00E11285 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE80E131E69329F00E11285 /* MenuBar.swift */; };
@@ -56,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		25CCF7D01983EFC64155ABB3 /* Pods-WaterReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterReport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaterReport/Pods-WaterReport.debug.xcconfig"; sourceTree = "<group>"; };
+		4DDBA2641EA16C6D009635EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		83C4221D112E739C0126A551 /* Pods-WaterReport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterReport.release.xcconfig"; path = "Pods/Target Support Files/Pods-WaterReport/Pods-WaterReport.release.xcconfig"; sourceTree = "<group>"; };
 		9C19B7431E62AA8800D54356 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9C19B7451E62AAC100D54356 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		9C9843D11E6D2D19001BBBD7 /* AccountTypeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTypeTableViewController.swift; sourceTree = "<group>"; };
 		9CA28EAE1E908CCB00CD1B7E /* WaterReportListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterReportListViewController.swift; sourceTree = "<group>"; };
 		9CB3BADA1E6748F000F6C958 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		9CB6AB891E628C190031174E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9CB904921E9B125C00D8F8F2 /* WaterSourceReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterSourceReport.swift; sourceTree = "<group>"; };
 		9CE80E111E69255B00E11285 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CE80E131E69329F00E11285 /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
@@ -191,7 +191,7 @@
 			children = (
 				9CECA0EB1E71CE350019A1F0 /* Icon */,
 				9CE80E101E69255B00E11285 /* Main.storyboard */,
-				9CB6AB891E628C190031174E /* GoogleService-Info.plist */,
+				4DDBA2641EA16C6D009635EA /* GoogleService-Info.plist */,
 				CEF2A5491E4F610500C604AC /* Assets.xcassets */,
 				CEF2A54B1E4F610500C604AC /* LaunchScreen.storyboard */,
 				CEF2A54E1E4F610500C604AC /* Info.plist */,
@@ -341,9 +341,9 @@
 			files = (
 				CEF2A54D1E4F610500C604AC /* LaunchScreen.storyboard in Resources */,
 				9CF073121EA1686600683513 /* Home_000000_25.png in Resources */,
+				4DDBA2651EA16C6D009635EA /* GoogleService-Info.plist in Resources */,
 				9CF0730F1EA1686600683513 /* Circled User Male_000000_25.png in Resources */,
 				9CF073101EA1686600683513 /* Edit_000000_25.png in Resources */,
-				9CB6AB8A1E628C190031174E /* GoogleService-Info.plist in Resources */,
 				CEF2A54A1E4F610500C604AC /* Assets.xcassets in Resources */,
 				9C69A1971E88C215000D01A3 /* CustomTableViewCell.xib in Resources */,
 				9CE80E121E69255B00E11285 /* Main.storyboard in Resources */,
@@ -403,7 +403,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		767F06580BEFA48249AC857E /* [CP] Copy Pods Resources */ = {
@@ -433,7 +433,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D345B0841960357C712AB599 /* [CP] Embed Pods Frameworks */ = {
