@@ -16,8 +16,8 @@
 		9C69A18F1E88A43A000D01A3 /* WaterSourceReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A18E1E88A43A000D01A3 /* WaterSourceReportViewController.swift */; };
 		9C69A1911E88A90C000D01A3 /* WaterTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A1901E88A90C000D01A3 /* WaterTypeTableViewController.swift */; };
 		9C69A1931E88A938000D01A3 /* WaterConditionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A1921E88A938000D01A3 /* WaterConditionTableViewController.swift */; };
-		9C69A1961E88C215000D01A3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A1941E88C215000D01A3 /* CustomTableViewCell.swift */; };
-		9C69A1971E88C215000D01A3 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C69A1951E88C215000D01A3 /* CustomTableViewCell.xib */; };
+		9C69A1961E88C215000D01A3 /* MyCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C69A1941E88C215000D01A3 /* MyCustomTableViewCell.swift */; };
+		9C69A1971E88C215000D01A3 /* MyCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C69A1951E88C215000D01A3 /* MyCustomTableViewCell.xib */; };
 		9C96E9791E91D4C5004724AA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96E9781E91D4C5004724AA /* MapViewController.swift */; };
 		9C9843D21E6D2D19001BBBD7 /* AccountTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9843D11E6D2D19001BBBD7 /* AccountTypeTableViewController.swift */; };
 		9CA28EAF1E908CCB00CD1B7E /* WaterReportListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA28EAE1E908CCB00CD1B7E /* WaterReportListViewController.swift */; };
@@ -34,6 +34,8 @@
 		9CF073101EA1686600683513 /* Edit_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CF0730C1EA1686600683513 /* Edit_000000_25.png */; };
 		9CF073111EA1686600683513 /* Google Maps_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CF0730D1EA1686600683513 /* Google Maps_000000_25.png */; };
 		9CF073121EA1686600683513 /* Home_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CF0730E1EA1686600683513 /* Home_000000_25.png */; };
+		9CF073151EA512C300683513 /* ListCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF073131EA512C300683513 /* ListCellTableViewCell.swift */; };
+		9CF073161EA512C300683513 /* ListCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CF073141EA512C300683513 /* ListCellTableViewCell.xib */; };
 		9CF826EB1E634CE20081591A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF826EA1E634CE20081591A /* HomeViewController.swift */; };
 		9CF826F01E635E480081591A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF826EF1E635E480081591A /* User.swift */; };
 		9CF826F21E635F4E0081591A /* AccountType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF826F11E635F4E0081591A /* AccountType.swift */; };
@@ -64,8 +66,8 @@
 		9C69A18E1E88A43A000D01A3 /* WaterSourceReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterSourceReportViewController.swift; sourceTree = "<group>"; };
 		9C69A1901E88A90C000D01A3 /* WaterTypeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterTypeTableViewController.swift; sourceTree = "<group>"; };
 		9C69A1921E88A938000D01A3 /* WaterConditionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterConditionTableViewController.swift; sourceTree = "<group>"; };
-		9C69A1941E88C215000D01A3 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		9C69A1951E88C215000D01A3 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		9C69A1941E88C215000D01A3 /* MyCustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomTableViewCell.swift; sourceTree = "<group>"; };
+		9C69A1951E88C215000D01A3 /* MyCustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomTableViewCell.xib; sourceTree = "<group>"; };
 		9C96E9781E91D4C5004724AA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9C9843D11E6D2D19001BBBD7 /* AccountTypeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTypeTableViewController.swift; sourceTree = "<group>"; };
 		9CA28EAE1E908CCB00CD1B7E /* WaterReportListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterReportListViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,8 @@
 		9CF0730C1EA1686600683513 /* Edit_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Edit_000000_25.png; sourceTree = "<group>"; };
 		9CF0730D1EA1686600683513 /* Google Maps_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google Maps_000000_25.png"; sourceTree = "<group>"; };
 		9CF0730E1EA1686600683513 /* Home_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home_000000_25.png; sourceTree = "<group>"; };
+		9CF073131EA512C300683513 /* ListCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCellTableViewCell.swift; sourceTree = "<group>"; };
+		9CF073141EA512C300683513 /* ListCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCellTableViewCell.xib; sourceTree = "<group>"; };
 		9CF826EA1E634CE20081591A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9CF826EF1E635E480081591A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9CF826F11E635F4E0081591A /* AccountType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountType.swift; sourceTree = "<group>"; };
@@ -134,8 +138,10 @@
 		9CA28EB01E90904500CD1B7E /* Custom Cell */ = {
 			isa = PBXGroup;
 			children = (
-				9C69A1941E88C215000D01A3 /* CustomTableViewCell.swift */,
-				9C69A1951E88C215000D01A3 /* CustomTableViewCell.xib */,
+				9C69A1941E88C215000D01A3 /* MyCustomTableViewCell.swift */,
+				9C69A1951E88C215000D01A3 /* MyCustomTableViewCell.xib */,
+				9CF073131EA512C300683513 /* ListCellTableViewCell.swift */,
+				9CF073141EA512C300683513 /* ListCellTableViewCell.xib */,
 			);
 			name = "Custom Cell";
 			sourceTree = "<group>";
@@ -342,10 +348,11 @@
 				CEF2A54D1E4F610500C604AC /* LaunchScreen.storyboard in Resources */,
 				9CF073121EA1686600683513 /* Home_000000_25.png in Resources */,
 				4DDBA2651EA16C6D009635EA /* GoogleService-Info.plist in Resources */,
+				9CF073161EA512C300683513 /* ListCellTableViewCell.xib in Resources */,
 				9CF0730F1EA1686600683513 /* Circled User Male_000000_25.png in Resources */,
 				9CF073101EA1686600683513 /* Edit_000000_25.png in Resources */,
 				CEF2A54A1E4F610500C604AC /* Assets.xcassets in Resources */,
-				9C69A1971E88C215000D01A3 /* CustomTableViewCell.xib in Resources */,
+				9C69A1971E88C215000D01A3 /* MyCustomTableViewCell.xib in Resources */,
 				9CE80E121E69255B00E11285 /* Main.storyboard in Resources */,
 				9CF073111EA1686600683513 /* Google Maps_000000_25.png in Resources */,
 			);
@@ -403,7 +410,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		767F06580BEFA48249AC857E /* [CP] Copy Pods Resources */ = {
@@ -433,7 +440,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D345B0841960357C712AB599 /* [CP] Embed Pods Frameworks */ = {
@@ -464,10 +471,11 @@
 				9C475ADB1E62BA09002BF6B1 /* ProfileViewController.swift in Sources */,
 				9C9843D21E6D2D19001BBBD7 /* AccountTypeTableViewController.swift in Sources */,
 				9CF826F21E635F4E0081591A /* AccountType.swift in Sources */,
-				9C69A1961E88C215000D01A3 /* CustomTableViewCell.swift in Sources */,
+				9C69A1961E88C215000D01A3 /* MyCustomTableViewCell.swift in Sources */,
 				9CECA0E01E70C73C0019A1F0 /* WaterType.swift in Sources */,
 				9C69A1911E88A90C000D01A3 /* WaterTypeTableViewController.swift in Sources */,
 				9C69A1931E88A938000D01A3 /* WaterConditionTableViewController.swift in Sources */,
+				9CF073151EA512C300683513 /* ListCellTableViewCell.swift in Sources */,
 				9CECA0E21E70C8610019A1F0 /* Location.swift in Sources */,
 				9C96E9791E91D4C5004724AA /* MapViewController.swift in Sources */,
 				9CECA0DE1E70C5B80019A1F0 /* WaterOverallCondition.swift in Sources */,

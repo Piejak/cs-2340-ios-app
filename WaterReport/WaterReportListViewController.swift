@@ -19,7 +19,11 @@ class WaterReportListViewController: UIViewController,UITableViewDelegate, UITab
     override func viewDidLoad() {
         self.reportListTable.delegate = self
         self.reportListTable.dataSource = self
-        self.reportListTable.register(UITableViewCell.self, forCellReuseIdentifier: "customCell")
+        let nib = UINib(nibName: "ListCellTableViewCell", bundle: nil)
+        self.reportListTable.register(nib, forCellReuseIdentifier: "ListCellTableViewCell")
+//        self.reportListTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+//        self.reportListTable.register(UINib?, forHeaderFooterViewReuseIdentifier: <#T##String#>)
+//        self.reportListTable.register(UINib(nibName: "MyCustomTableCell", bundle: nil), forCellReuseIdentifier: "customCell")
         super.viewDidLoad()
         fillList()
         // Do any additional setup after loading the view.
@@ -67,10 +71,11 @@ class WaterReportListViewController: UIViewController,UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
 //        let cell = UITableViewCell(style: .default, reuseIdentifier: "WaterSourceReport") as! CustomTableViewCell
-        let cell: CustomTableViewCell = self.reportListTable.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! CustomTableViewCell
+        let cell: ListCellTableViewCell = self.reportListTable.dequeueReusableCell(withIdentifier: "ListCellTableViewCell", for: indexPath) as! ListCellTableViewCell
+//        let cell = UITableViewCell(style: .default, reuseIdentifier: "listCell")
+//        let cell = Bundle.main.loadNibNamed("CustomTableViewCell", owner: self, options: nil) as! CustomTableViewCell
         let report = self.reports[indexPath.row]
-        let number = String(report.reportNumber!)
-        cell.numbeLabel.text = number
+        cell.numberLabel.text = String(report.reportNumber)
         cell.dateLabel.text = report.date
 //        cell.latitudeLabel.text = report.location.
 //        cell.longitudeLabel.text = report.location[1]
