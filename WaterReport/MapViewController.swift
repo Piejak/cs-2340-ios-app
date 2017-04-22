@@ -13,6 +13,7 @@ import GoogleMaps
 import FirebaseDatabase
 import FirebaseStorage
 import FirebaseAuth
+import Firebase
 
 import MapKit
 import CoreLocation
@@ -20,11 +21,59 @@ import CoreLocation
 class MapViewController: UIViewController {
     @IBOutlet weak var map: MKMapView!
     var reports = [WaterSourceReport] ()
+    var ref: FIRDatabaseReference!
+    var refh: UInt!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateData()
-        var size = self.reports.count
+        //updateData()
+        
+        FIRDatabase.database().reference().child("WaterSourceReport").observe(.childAdded, with: { (snapshot) in
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                let report = WaterSourceReport()
+                report.location = (dictionary["location"] as? [AnyHashable : Any]?)!
+                report.date = dictionary["date"] as! String?
+                report.reporter = dictionary["reporter"] as! String?
+                report.reportNumber = dictionary["reportNumber"] as! Int?
+                report.waterCondition = dictionary["waterCondition"] as! String?
+                report.waterType = dictionary["waterType"] as! String?
+                self.reports.append(report)
+                
+                let size = self.reports.count
+                print(size)
+                
+                var i = 0
+                while (i < size - 1) {
+                    let lo = self.reports[i].location[AnyHashable("Longitude")]! as! Double
+                    let la = self.reports[i].location[AnyHashable("Latitude")]! as! Double
+                    
+                    let num = String(self.reports[i].reportNumber)
+                    let location = CLLocationCoordinate2DMake(lo, la)
+                    let annotation = MKPointAnnotation()
+                    
+                    annotation.coordinate = location
+                    
+                    
+                    
+                    
+                    
+                    
+                    annotation.title = "reporter : " + self.reports[i].reporter + "; report Number: " + " " + num + "; Date: " + self.reports[i].date
+                    
+                    annotation.subtitle = "Water Type" + self.reports[i].waterType + "; Water Condition: " + self.reports[i].waterCondition
+                    
+                    self.map.addAnnotation(annotation)
+                    i = i + 1
+                }
+
+                
+            }
+        })
+
+        
+        let size = self.reports.count
+        print(size)
         /*for index in 0...size {
             var lo = self.reports[index].location[AnyHashable("Longitude")] as! Double
             //var long = Double(lo)
@@ -135,6 +184,23 @@ class MapViewController: UIViewController {
                 self.reports.append(report)
                 
             }
+        })
+    }
+    
+    func naData() {
+        ref = FIRDatabase.database().reference()
+        refh = ref.observe(FIRDataEventType.value, with: {(snapshot) in
+            let dictionary = snapshot.value as? [String: AnyObject]
+            let report = WaterSourceReport()
+            report.location = (dictionary!["location"] as? [AnyHashable : Any]?)!
+            report.date = dictionary!["date"] as! String?
+            report.reporter = dictionary!["reporter"] as! String?
+            report.reportNumber = dictionary!["reportNumber"] as! Int?
+            report.waterCondition = dictionary!["waterCondition"] as! String?
+            report.waterType = dictionary!["waterType"] as! String?
+            self.reports.append(report)
+        
+        
         })
     }
 
