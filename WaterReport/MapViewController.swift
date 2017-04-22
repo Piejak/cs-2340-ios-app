@@ -31,26 +31,42 @@ class MapViewController: UIViewController {
         
         FIRDatabase.database().reference().child("WaterSourceReport").observe(.childAdded, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String: AnyObject] {
-                let report = WaterSourceReport()
+                var report = WaterSourceReport()
                 report.location = (dictionary["location"] as? [AnyHashable : Any]?)!
+                
                 report.date = dictionary["date"] as! String?
                 report.reporter = dictionary["reporter"] as! String?
                 report.reportNumber = dictionary["reportNumber"] as! Int?
+                
+                
                 report.waterCondition = dictionary["waterCondition"] as! String?
                 report.waterType = dictionary["waterType"] as! String?
+                
+                var lo = report.location[AnyHashable("Longitude")]! as! Double
+                var la = report.location[AnyHashable("Latitude")]! as! Double
+                var num = String(report.reportNumber)
+                var location = CLLocationCoordinate2DMake(lo, la)
+                var annotation = MKPointAnnotation()
+                
+                annotation.coordinate = location
+                annotation.title = "reporter : " + report.reporter + "; report Number: " + " " + num + "; Date: " + report.date
+                
+                annotation.subtitle = "Water Type" + report.waterType + "; Water Condition: " + report.waterCondition
+                
+                self.map.addAnnotation(annotation)
                 self.reports.append(report)
                 
-                let size = self.reports.count
+                var size = self.reports.count
                 print(size)
                 
-                var i = 0
+                /*var i = 0
                 while (i < size - 1) {
-                    let lo = self.reports[i].location[AnyHashable("Longitude")]! as! Double
-                    let la = self.reports[i].location[AnyHashable("Latitude")]! as! Double
+                    var lo = self.reports[i].location[AnyHashable("Longitude")]! as! Double
+                    var la = self.reports[i].location[AnyHashable("Latitude")]! as! Double
                     
-                    let num = String(self.reports[i].reportNumber)
-                    let location = CLLocationCoordinate2DMake(lo, la)
-                    let annotation = MKPointAnnotation()
+                    var num = String(self.reports[i].reportNumber)
+                    var location = CLLocationCoordinate2DMake(lo, la)
+                    var annotation = MKPointAnnotation()
                     
                     annotation.coordinate = location
                     
@@ -65,14 +81,14 @@ class MapViewController: UIViewController {
                     
                     self.map.addAnnotation(annotation)
                     i = i + 1
-                }
+                }*/
 
                 
             }
         })
 
         
-        let size = self.reports.count
+        /*let size = self.reports.count
         print(size)
         /*for index in 0...size {
             var lo = self.reports[index].location[AnyHashable("Longitude")] as! Double
@@ -147,7 +163,7 @@ class MapViewController: UIViewController {
             
             map.addAnnotation(annotation)
             i = i + 1
-        }
+        }*/
         
         
         
